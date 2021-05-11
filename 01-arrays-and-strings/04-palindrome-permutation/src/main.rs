@@ -3,7 +3,7 @@ use std::collections::{hash_map::Entry, HashMap};
 // Sentences are permutations of one another if they have the same character count.
 // Sentences are palindromes when they have for i=0..len; j=len..0  w[i]==w[j]
 // A sentences is a permutation of a palindrome when every character within it appears an even
-// number of times, or only _one_ character appears once.
+// number of times, and _at most one_ character appears exactly once.
 fn palindrome_permutation(s: &str) -> bool {
     let mut char_counts: HashMap<char, usize> = HashMap::with_capacity(s.len());
     let mut odd_chars: usize = 0;
