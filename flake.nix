@@ -27,7 +27,9 @@
               "rustfmt-preview"
             ])
             fenixPkgs.rust-analyzer
+            cargo-criterion
             cargo-edit
+            gnuplot
           ];
         };
       });
