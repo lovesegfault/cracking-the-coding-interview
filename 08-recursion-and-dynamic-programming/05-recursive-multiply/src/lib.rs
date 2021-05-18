@@ -90,10 +90,10 @@ pub fn recursive_mul4(a: u64, b: u64) -> u64 {
         }
 
         let s = smaller / 2;
-        let half_a = inner_memo(s, larger, memo);
+        let half_a = inner_memo(larger, s, memo);
         let mut half_b = half_a;
         if smaller % 2 == 1 {
-            half_b = inner_memo(smaller - s, larger, memo);
+            half_b = inner_memo(larger, smaller - s, memo);
         }
 
         half_a + half_b
@@ -114,7 +114,7 @@ pub fn recursive_mul5(mut a: u64, mut b: u64) -> u64 {
         }
 
         let s = smaller / 2;
-        let half_mul = inner(s, larger);
+        let half_mul = inner(larger, s);
         if smaller % 2 == 0 {
             half_mul + half_mul
         } else {
