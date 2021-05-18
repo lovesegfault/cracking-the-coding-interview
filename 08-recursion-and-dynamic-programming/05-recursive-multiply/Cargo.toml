@@ -1,0 +1,32 @@
+[package]
+name = "recursive-multiply"
+version = "0.1.0"
+edition = "2018"
+
+[lib]
+bench = false
+
+[dev-dependencies]
+criterion = "0.3.4"
+itertools = "0.10.0"
+paste = "1.0.5"
+
+[[bench]]
+name = "recursive_mul"
+harness = false
+
+[[bench]]
+name = "recursive_mul2"
+harness = false
+
+[[bench]]
+name = "recursive_mul3"
+harness = false
+
+[[bench]]
+name = "recursive_mul4"
+harness = false
+
+[[bench]]
+name = "recursive_mul5"
+harness = false
