@@ -45,10 +45,10 @@ pub fn recursive_mul3(a: u64, b: u64) -> u64 {
         }
 
         let s = smaller / 2;
-        let half_a = inner_smaller(s, larger);
+        let half_a = inner(larger, s);
         let mut half_b = half_a;
         if smaller % 2 == 1 {
-            half_b = inner(smaller - s, larger);
+            half_b = inner(larger, smaller - s);
         }
 
         half_a + half_b
@@ -90,7 +90,7 @@ pub fn recursive_mul4(a: u64, b: u64) -> u64 {
         }
 
         let s = smaller / 2;
-        let half_a = inner_smaller(s, larger, memo);
+        let half_a = inner_memo(s, larger, memo);
         let mut half_b = half_a;
         if smaller % 2 == 1 {
             half_b = inner_memo(smaller - s, larger, memo);
